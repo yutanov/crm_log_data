@@ -1,7 +1,7 @@
 # Script adding logs to google sheet
 * gspread `[5.7.2]` - Библиотека для работы с API Google Sheets
 
-## Инструкция по запуску проекта
+## Инструкция по запуску скрипта
 1. Установите необходимые зависимости
 ```sh
 $ pip install -r requirements.txt
@@ -13,7 +13,7 @@ $ python main.py
 ```
 
 ## Ссылки и ключи
-* [Google-таблица] в которую добавляются логи (https://docs.google.com/spreadsheets/d/1MxOJjUa5BXydrZree0YLoAEdlK4dswuPrwkA7y_fT8Et)
+* [Google-таблица](https://docs.google.com/spreadsheets/d/1MxOJjUa5BXydrZree0YLoAEdlK4dswuPrwkA7y_fT8Et) в которую добавляются логи 
 * Ключ для доступа к API "key.json" - должен находится в одной директории со скриптом
 
 ## Принцип работы
