@@ -6,7 +6,7 @@ from gspread.exceptions import WorksheetNotFound
 # исходные данные json ключа, файла с логами и google таблицы
 KEY = "key.json"
 FILE = "logs_example.txt"
-ACCESS_LINK = "https://docs.google.com/spreadsheets/d/1MxOJjUa5BXydrZree0YLoAEdlK4dswuPrwkA7y_fT8E/edit?usp=sharing"
+ACCESS_LINK = "https://docs.google.com/spreadsheets/d/1PrWV4MwgiAdUov4KqiOvhOg5brQiQvfSENpxkpkUMBY"
 
 
 # создание файла с логами
