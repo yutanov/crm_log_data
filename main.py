@@ -48,10 +48,12 @@ def main():
         sh = wks.worksheet(current_date)
     except WorksheetNotFound:
         sh = wks.add_worksheet(title=current_date, rows=1000, cols=20)
+
     row = 1
+    log_flow = True
 
     # цикл с получением логов
-    while True:
+    while log_flow:
         # проверка даты
         # если наступил следующий день - логи будут помещаться в новый лист
         date_today = datetime.today().strftime('%Y-%m-%d')
@@ -61,18 +63,22 @@ def main():
             row = 1
 
         # получение лога, даты, времени, текста лога
-        log = get_log()[0]
-        date = re.search(r'\d{4}-\d{2}-\d{2}', log).group()
-        log = log.replace(date, '')
-        time = re.search(r'\d{2}:\d{2}:\d{2}', log).group()
-        log = log.replace(time, '')
+        try:
+            log = get_log()[0]
+            date = re.search(r'\d{4}-\d{2}-\d{2}', log).group()
+            log = log.replace(date, '')
+            time = re.search(r'\d{2}:\d{2}:\d{2}', log).group()
+            log = log.replace(time, '')
 
-        # помещение в таблицу
-        cell = f"A{row}"
-        sh.update(cell, [[time, log, date]])
+            # помещение в таблицу
+            cell = f"A{row}"
+            sh.update(cell, [[time, log, date]])
 
-        print(f"{log} added")
-        row += 1
+            print(f"{log} added")
+            row += 1
+        except Exception:
+            print("No more logs")
+            log_flow = False
 
     print("All logs has been added")
 
