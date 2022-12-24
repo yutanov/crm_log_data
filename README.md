@@ -13,7 +13,7 @@ $ python main.py
 ```
 
 ## Ссылки и ключи
-* [Google-таблица](https://docs.google.com/spreadsheets/d/1MxOJjUa5BXydrZree0YLoAEdlK4dswuPrwkA7y_fT8Et) в которую добавляются логи 
+* [Google-таблица](https://docs.google.com/spreadsheets/d/1MxOJjUa5BXydrZree0YLoAEdlK4dswuPrwkA7y_fT8E) в которую добавляются логи 
 * Ключ для доступа к API "key.json" - должен находится в одной директории со скриптом
 
 ## Принцип работы
