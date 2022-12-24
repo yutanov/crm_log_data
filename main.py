@@ -1,6 +1,5 @@
 import gspread
 import re
-from time import sleep
 from datetime import datetime
 from gspread.exceptions import WorksheetNotFound
 
@@ -21,6 +20,7 @@ def create_logs_example():
             the_file.write(log_string)
             log_n += 1
     print("Test logs are created")
+
 
 # имитация получения логов
 def get_log():
